@@ -7,11 +7,16 @@ var products = [
   { name: "carrot", expirationDate: new Date("2018/11/10") }
 ];
 
-Array.prototype.myFunction = function() {
+// products.map(elem => {
+//   console.log(elem);
+// });
+
+// Array.prototype.myFunction = function() {
+//   console.log(this);
+// };
+
+Array.prototype.myFunctionArrow = () => {
   console.log(this);
 };
 
-var myArray = [1, 2, 3, 4];
-myArray.myFunction();
-
-console.log(Object.getPrototypeOf(myArray));
+products.myFunctionArrow();

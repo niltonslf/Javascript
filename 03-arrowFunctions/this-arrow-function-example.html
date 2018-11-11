@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>This arrow function</title>
+  </head>
+
+  <body>
+    <input type="button" class="myButton" value="Click me" />
+
+    <script>
+      const sandwich = {
+        bread: "white",
+        cheese: "cheddar",
+        prepare: function() {
+          return `I want a sandwich with ${this.bread} bread and ${
+            this.cheese
+          } cheese.`;
+        },
+        // make: function() {
+        //   var that = this;
+        //   window.setTimeout(function() {
+        //     console.log(that.prepare());
+        //   }, 500);
+        // }
+        make: function() {
+          console.log(this);
+          window.setTimeout(() => {
+            console.log(this.prepare());
+          }, 500);
+        }
+      };
+
+      const btn = document.querySelector(".myButton");
+      btn.addEventListener("click", function() {
+        sandwich.make();
+      });
+    </script>
+  </body>
+</html>

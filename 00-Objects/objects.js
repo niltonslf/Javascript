@@ -1,6 +1,6 @@
 /*
-*  Introducing
-*/
+ *  Introducing
+ */
 
 //creating a new object
 const person = {
@@ -27,13 +27,10 @@ console.log(Object.keys(person));
 console.log("\nObject.getOwnPropertyNames(o)");
 console.log(Object.getOwnPropertyNames(person));
 
-console.log("Prototype", Object.getPrototypeOf(person)
-);
+console.log("Prototype", Object.getPrototypeOf(person));
 
 console.log("\nshow all properties");
 console.log(showAllProperties(person));
-
-
 
 function showAllProperties(o) {
   var objectToBeInspected;
@@ -49,13 +46,13 @@ function showAllProperties(o) {
   return result;
 }
 
-console.log(showProps(person, "person"));
-function showProps(obj,objName){
-  var result = ''
-  for(var i in obj){
-   if(obj.hasOwnProperty(i)){
-     result += `${objName}.${i}= ${obj[i]}\n`;
-   }
+// console.log(showProps(person, "person"));
+function showProps(obj, objName) {
+  var result = "";
+  for (var i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      result += `${objName}.${i}= ${obj[i]}\n`;
+    }
   }
-  return result
+  return result;
 }
