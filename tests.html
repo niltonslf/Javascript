@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Html used for tests</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * Recebe um função messageType e um nome então executa a messageType como callback passando a variável name como parâmetro.
+       * @param {*} messageType função com o tipo de mensagem
+       * @param {*} name Nome que será exibido
+       */
+      function showName(messageType, name) {
+        messageType(name);
+      }
+
+      /**
+       * Recebe um name como argumento exibindo-o dentro de uma mensagem de texto simples.
+       * @param {*} name
+       */
+      function textMessage(name) {
+        console.log(`Hello ${name}`);
+      }
+
+      /**
+       * Recebe um name como argumento exibindo-o dentro de alerta
+       * @param {*} name
+       */
+      function alertMessage(name) {
+        alert(`Hello ${name}`);
+      }
+
+      /*
+       * Testando a função
+       */
+
+      // testando com o primeiro tipo de mensagem
+      showName(textMessage, "Morre Cedo");
+
+      showName(alertMessage, "Morre Cedo");
+    </script>
+  </body>
+</html>

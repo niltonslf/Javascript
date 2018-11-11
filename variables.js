@@ -7,6 +7,3 @@ function sayAnimal() {
 
 sayAnimal();
 console.log(animal);
-
-
-
