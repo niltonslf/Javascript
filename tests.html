@@ -8,39 +8,24 @@
   </head>
   <body>
     <script>
-      /**
-       * Recebe um função messageType e um nome então executa a messageType como callback passando a variável name como parâmetro.
-       * @param {*} messageType função com o tipo de mensagem
-       * @param {*} name Nome que será exibido
-       */
-      function showName(messageType, name) {
-        messageType(name);
-      }
+      var products = [
+        { name: "apples", expirationDate: new Date() },
+        { name: "Milk", expirationDate: new Date() },
+        { name: "Bread", expirationDate: new Date() },
+        { name: "Rice", expirationDate: new Date() },
+        { name: "banana", expirationDate: new Date("2018/11/10") },
+        { name: "carrot", expirationDate: new Date("2018/11/10") }
+      ];
 
-      /**
-       * Recebe um name como argumento exibindo-o dentro de uma mensagem de texto simples.
-       * @param {*} name
-       */
-      function textMessage(name) {
-        console.log(`Hello ${name}`);
-      }
+      Array.prototype.myFunction = function(message) {
+        if (message) console.log(message);
+        console.log(this);
+      };
 
-      /**
-       * Recebe um name como argumento exibindo-o dentro de alerta
-       * @param {*} name
-       */
-      function alertMessage(name) {
-        alert(`Hello ${name}`);
-      }
+      var myArray = [1, 2, 3, 4];
+      myArray.myFunction("estes são meus valores:");
 
-      /*
-       * Testando a função
-       */
-
-      // testando com o primeiro tipo de mensagem
-      showName(textMessage, "Morre Cedo");
-
-      showName(alertMessage, "Morre Cedo");
+      console.log(Object.getPrototypeOf(myArray));
     </script>
   </body>
 </html>
