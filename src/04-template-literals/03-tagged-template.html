@@ -20,7 +20,6 @@
 
     function red(template, ...values) {
       return template.reduce((accumulator, part, i) => {
-        console.log(`${accumulator} <=`);
         return `
           ${accumulator}
           <span class="red">${values[i-1].toUpperCase()}</span>
