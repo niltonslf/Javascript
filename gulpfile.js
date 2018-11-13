@@ -5,7 +5,7 @@ var browserSync = require("browser-sync").create();
 gulp.task("serve", function() {
   browserSync.init({
     server: {
-      baseDir: "./src"
+      baseDir: "./src/04-template-literals/"
     }
   });
 });

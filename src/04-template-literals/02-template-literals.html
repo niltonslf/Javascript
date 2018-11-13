@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Template Literals</title>
+  </head>
+
+  <body></body>
+  <script>
+    const article = {
+      title: "My title",
+      intro: "Lorem ipsum dolor sit hamelte",
+      body:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo minima nam veniam sit odio aliquam, repudiandae ducimus maxime sequi, neque modi unde veritatis aperiam blanditiis impedit quaerat officia sunt! Cumque.",
+      tags: ["es6", "js", "template-literal"],
+      author: "Morre Cedo"
+    };
+
+    function renderAuthor(name){
+      return name ? name : 'unknown'
+    }
+
+    const markup = `
+      <article>
+        <header>
+          <h1>${article.title}</h1>
+        </header>
+        <section>${article.intro}</section>
+        <footer>
+          <ul>
+            ${article.tags.map(tag => `<li>${tag}</li>`).join("")}
+          </ul>
+          <p>${renderAuthor(article.author)}</p>
+        </footer>
+      </article>
+    `;
+    document.body.innerHTML = markup;
+  </script>
+</html>

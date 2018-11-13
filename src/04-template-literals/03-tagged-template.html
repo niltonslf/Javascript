@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tagged Template</title>
+    <style>
+      .red {
+        color: red;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const city = "Canadá"
+    const something = "beautiful"
+    const otherThing = "live"
+
+    function red(template, ...values) {
+      return template.reduce((accumulator, part, i) => {
+        console.log(`${accumulator} <=`);
+        return `
+          ${accumulator}
+          <span class="red">${values[i-1].toUpperCase()}</span>
+          ${part}
+        `;
+      })
+    }
+
+    const canada = red`${city} it's so ${something}. One day a want to ${otherThing} there.`
+
+    document.body.innerHTML = canada
+  </script>
+</html>
