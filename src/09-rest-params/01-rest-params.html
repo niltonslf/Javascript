@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rest params</title>
+</head>
+<body>
+</body>
+<script>
+ 
+ // old way
+//  function mutiply(mult,arg1,arg2,arg3){
+//    let arr = []
+//    arr.push(mult * arg1)
+//    arr.push(mult * arg2)
+//    arr.push(mult * arg3)
+//    return arr
+//  }
+
+function mutiply(mult, ...args){
+  return args.map(arg => arg * mult)
+}
+
+  console.log(mutiply(2,1,2,3,4,5));
+
+</script>
+</html>
