@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Destructuring</title>
+  </head>
+  <body></body>
+  <script>
+    var data = {
+      name: "Nilton",
+      age: 22,
+      city: "Curitiba",
+      social: {
+        twitter: "@niltonslf",
+        facebook: 'niltonlopes'
+      }
+    }
+
+    // const name = data.name
+    // const age = data.age
+    // const twitter = data.social.twitter
+    // console.log({ name, age, twitter })
+
+    const { name, age } = data
+    console.log({ name, age })
+    const { twitter } = data.social
+
+    console.log({ twitter })
+
+    // Fornecendo um nome personalizado
+    const { twitter: tw } = data.social
+    console.log({ tw })
+    // fornecendo um valor default
+    const {facebook = 'niltonslf'} = data.social;
+    console.log({facebook});
+
+  </script>
+</html>

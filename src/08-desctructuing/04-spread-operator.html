@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Spread operator</title>
+  </head>
+  <body></body>
+  <script>
+    let front = ["vue", "js", "css"]
+
+    console.log(...front)
+    console.log([..."Nilton lopes"])
+
+    // utilizando spread  com funcões
+
+    function makeSandwich(bread, cheese, souce) {
+      return bold`Your sandwich with ${bread} bread, ${cheese} cheese and ${souce} souce is done!`
+    }
+
+    // testing using a reduce method 
+    function bold(template, ...values) {
+      return template.reduce((acumulator, current, index) => {
+        return `${acumulator}<b>${values[index - 1]}</b>${current}`
+      })
+    }
+
+    let ingredients = ["white", "cheddar", "barbecue"]
+    document.body.innerHTML = makeSandwich(...ingredients)
+  </script>
+</html>
