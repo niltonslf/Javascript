@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Using Promisses</title>
+
+    <style>
+      .table td {
+        border-bottom: 1px solid #333;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body></body>
+
+  <script>
+    const trelloKey = "914496ed63a36468c6c75be7950a2f95"
+    const trelloToken =
+      "be60159b26f701a948030f07543fa9913ed2481e637a71fc177ee8875db56718"
+    const requestUrl = `&key=${trelloKey}&token=${trelloToken}`
+
+    const trello = fetch(
+      `https://api.trello.com/1/boards/W7YAx5so/?cards=all${requestUrl}`
+    )
+
+    // recebe os dados do fetch e executa as ações necessárias
+    trello
+      .then(data => data.json()) // retorna os dados em json
+      .then(dataJson => {
+        rendererList(dataJson.cards) // chama a função de redenrizar a tablea, passando um array de elementos
+      }).catch(err => console.log(err))
+
+    /**
+     * Recebe um array de elementos
+     * e exibe uma tabela com cada elemento
+     */
+    function rendererList(elements) {
+      const table = document.createElement("table")
+      table.classList.add("table")
+      document.body.appendChild(table)
+      elements.forEach(elem => {
+        const row = document.createElement("tr")
+        const column = (row.appendChild(
+          document.createElement("td")
+        ).innerText = elem.name)
+        table.appendChild(row)
+      })
+    }
+  </script>
+</html>
