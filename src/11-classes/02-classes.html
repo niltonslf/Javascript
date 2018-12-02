@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Herança prototial</title>
+  </head>
+
+  <body></body>
+  <script>
+    class Animal {
+      constructor(kind, sound) {
+        this.sound = sound
+        this.kind = kind
+      }
+
+      // shorthand for helo: function(){...}
+      hello() {
+        console.log(`${this.sound}! I'm a ${this.kind}`)
+      }
+
+      // static methods only exists into Animal
+      static info() {
+        console.log("This is a class to create animals")
+      }
+
+      get name() {
+        console.log(`My name is ${this.nick}`)
+      }
+      set nickname(nick) {
+        this.nick = nick
+      }
+    }
+
+    const cat = new Animal("Cat", "Meoooooow")
+    cat.hello()
+  </script>
+</html>

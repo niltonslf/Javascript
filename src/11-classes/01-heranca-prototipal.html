@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Herança prototial</title>
+  </head>
+  <body></body>
+  <script>
+    //Classe
+    function Animal(kind, sound) {
+      this.kind = kind
+      this.sound = sound
+    }
+    // Metódos (Herança prototipal)
+    Animal.prototype.talk = function() {
+      console.log(`${this.sound}\n I'm a ${this.kind}`)
+    }
+
+    let cat = new Animal("Cat", "Meow")
+    let dog = new Animal("Dog", "Bark!")
+
+    console.log(cat)
+    console.log(dog)
+  </script>
+</html>

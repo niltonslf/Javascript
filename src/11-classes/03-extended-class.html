@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Herança prototial</title>
+  </head>
+
+  <body></body>
+  <script>
+    class Animal {
+      constructor(name) {
+        this.name = name
+      }
+
+      // shorthand for helo: function(){...}
+      hello() {
+        console.log(`${this.sound}! I'm a ${this.kind}`)
+      }
+    }
+
+    class Cat extends Animal {
+      constructor(name, sound) {
+        super(name)
+        this.sound = sound
+      }
+
+      meow() {
+        console.log(`${this.sound}!! I'm ${this.name}`)
+      }
+    }
+
+    const cat = new Cat("Cat", "Meoooooow")
+  </script>
+</html>
