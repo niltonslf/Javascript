@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Async/Await</title>
+  </head>
+  <body>
+    Async/Await
+  </body>
+  <script>
+    async function getUsers(users) {
+      const promises = users.map(user =>
+        fetch(`https://api.github.com/users/${user}`).then(res => res.json())
+      )
+      const response = await Promise.all(promises)
+      console.log(response)
+    }
+
+    getUsers(['niltonslf', 'willianjusten'])
+  </script>
+</html>
