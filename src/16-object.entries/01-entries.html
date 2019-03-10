@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+  </head>
+  <body></body>
+  <script>
+    const goals = {
+      english: 10,
+      nuxt: 15,
+      adonisjs: 5,
+    }
+
+    // console.log(Object.entries(goals))
+    const goalsMap = new Map(Object.entries(goals))
+
+    console.log(goalsMap.size)
+    console.log(goalsMap.has('nuxt'))
+    console.log(goalsMap.get('adonisjs'))
+  </script>
+</html>
