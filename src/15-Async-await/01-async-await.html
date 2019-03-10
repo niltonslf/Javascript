@@ -11,11 +11,15 @@
   </body>
   <script>
     async function getGithubEvents() {
-      const response = await fetch('https://api.github.com/events')
-      const data = await response.json()
-      return data.map(event => {
-        console.log(event.repo.name)
-      })
+      try {
+        const response = await fetch('https://api.github.com/events')
+        const data = await response.json()
+        return data.map(event => {
+          console.log(event.repo.name)
+        })
+      } catch (err) {
+        console.error('Ocorreu um erro', err)
+      }
     }
     getGithubEvents()
   </script>
