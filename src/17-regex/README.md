@@ -1,4 +1,4 @@
-#Expressões regulares
+# Expressões regulares
 
 Expressões regulares é uma forma de buscar uma combinação de caracteres em uma string. Em javascript, uma expressão regular também é um objeto.
 
