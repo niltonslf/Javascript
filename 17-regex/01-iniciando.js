@@ -36,3 +36,11 @@ console.log(str.match(/(na)+/g))
 
 // x? => Pesquisando por 0 ou 1 vez o caracter precedido em uma string
 console.log(str.match(/a?/g))
+
+// . => Pesquisando por qualquer caractere
+console.log(str.match(/./g))
+
+
+// Substituindo caracteres numa string
+str = '000.000.000,11'
+console.log(str.replace(/\./g,'').replace(/\,/g,'.'))
