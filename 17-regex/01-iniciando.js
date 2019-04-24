@@ -44,3 +44,13 @@ console.log(str.match(/./g))
 // Substituindo caracteres numa string
 str = '000.000.000,11'
 console.log(str.replace(/\./g,'').replace(/\,/g,'.'))
+
+// x(?=y) => Pesquisa correspondência em x apenas se x for precedido de y. Também chamado de lookahead
+// g => Buscar globalmente
+// i => case insensitive
+
+str = 'Nilton Lopes Nilton Alves'
+console.log(str.match(/nilton(?=\sLopes)/gi))
+
+// x(?!y) => Negação lookahead
+console.log(str.match(/nilton(?!\sLopes)/gi))
