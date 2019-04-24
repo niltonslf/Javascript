@@ -54,3 +54,53 @@ console.log(str.match(/nilton(?=\sLopes)/gi))
 
 // x(?!y) => Negação lookahead
 console.log(str.match(/nilton(?!\sLopes)/gi))
+
+// TODO: x|y
+
+// TODO: {n}
+
+// TODO: {n,m}
+
+// TODO: [xyz]
+
+// TODO: [^xyz]
+
+// TODO: [\b]
+
+// TODO: \b
+
+// TODO: \B
+
+// TODO: \cx
+
+// TODO: \d
+
+// TODO: \D
+
+// TODO: \f
+
+// TODO: \n
+
+// TODO: \r
+
+// TODO: \s
+
+// TODO: \S
+
+// TODO: \t
+
+// TODO: \v
+
+// TODO: \w
+
+// TODO: \W
+
+// TODO: \W
+
+// TODO: \num
+
+// TODO: \0
+
+// TODO: \xhh
+
+// TODO: \uhhhh
