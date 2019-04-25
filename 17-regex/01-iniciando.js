@@ -55,18 +55,18 @@ console.log(str.match(/nilton(?=\sLopes)/gi))
 // x(?!y) => Negação lookahead
 console.log(str.match(/nilton(?!\sLopes)/gi))
 
-// TODO: x|y => Buscar correspondência de x ou y
+// x|y => Buscar correspondência de x ou y
 str = 'I wake up early every morning'
 console.log(str.match(/wake|early/g))
 
-// TODO: {n} => Pesquisa ocorrências  do caractere precedido.
+// {n} => Pesquisa ocorrências  do caractere precedido.
 str = 'Scooby-doooo'
 console.log(str.match(/o{2}/g))
 
-// TODO: {n,m} => Pesquisa a menor (n) e a maior (m) ocorrências do caractere precedido. 
+// {n,m} => Pesquisa a menor (n) e a maior (m) ocorrências do caractere precedido. 
 console.log(str.match(/o{2,4}/g))
 
-// TODO: [xyz] => Pesquisa correpondência de um conjunto de caracteres
+// [xyz] => Pesquisa correpondência de um conjunto de caracteres
 console.log('correspondência de [xyz]',str.match(/[cob]/g))
 // Pode-se utilizar o hífen para definir um intervalo de caracteres
 console.log(str.match(/[c-o]/g))
@@ -75,14 +75,18 @@ console.log(str.match(/[Sc-o]/g))
 // Ou ignorar o case sensitive utilizando i no final da expressão
 console.log(str.match(/[Sc-o]/gi))
 
-// TODO: [^xyz] => Negação de [xyz], ou seja, busca pelos cacteres diferentes do informados
+// [^xyz] => Negação de [xyz], ou seja, busca pelos cacteres diferentes do informados
 console.log('Não correspondência de [xyz]',str.match(/[^c-o]/g))
 
 // TODO: [\b]
 
-// TODO: \b
+// TODO: \b => Busca por correspondência  de uma fronteira de caractere. Uma fronteira corresponde a posição onde o caractere/palavra não é seguido ne nenhum caractere ou palavra.
+str = "Testing match"
+console.log('\\b',str.match(/s\b/gi))
+// output: null => Retorna esse resultado pois s (termo buscado) é seguido por outro caractere
 
-// TODO: \B
+// TODO: \B => Negação da fronteire de caractere. No lugar buscar correspondência somente onde o caractere/palavra não é seguido por um caractere, irá buscar onde for seguido
+console.log('\\B',str.match(/s\B/gi))
 
 // TODO: \cx
 
