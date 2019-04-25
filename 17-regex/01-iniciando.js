@@ -99,7 +99,9 @@ console.log('\\D', str.match(/\D/g))
 
 // TODO: \f
 
-// TODO: \n.
+// \n => Encontra correspondência de um caractere de quebra de linha
+let longStr = 'First line\n Second Line'
+console.log('\\n', longStr.match(/e\n/g))
 
 // TODO: \r
 
