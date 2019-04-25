@@ -55,7 +55,9 @@ console.log(str.match(/nilton(?=\sLopes)/gi))
 // x(?!y) => Negação lookahead
 console.log(str.match(/nilton(?!\sLopes)/gi))
 
-// TODO: x|y
+// TODO: x|y => Buscar correspondência de x ou y
+str = 'I wake up early every morning'
+console.log(str.match(/wake|early/g))
 
 // TODO: {n}
 
@@ -79,7 +81,7 @@ console.log(str.match(/nilton(?!\sLopes)/gi))
 
 // TODO: \f
 
-// TODO: \n
+// TODO: \n.
 
 // TODO: \r
 
