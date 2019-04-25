@@ -59,9 +59,12 @@ console.log(str.match(/nilton(?!\sLopes)/gi))
 str = 'I wake up early every morning'
 console.log(str.match(/wake|early/g))
 
-// TODO: {n}
+// TODO: {n} => Pesquisa ocorrências  do caractere precedido.
+str = 'Scooby-doooo'
+console.log(str.match(/o{2}/g))
 
-// TODO: {n,m}
+// TODO: {n,m} => Pesquisa a menor (n) e a maior (m) ocorrências do caractere precedido. 
+console.log(str.match(/o{2,4}/g))
 
 // TODO: [xyz]
 
