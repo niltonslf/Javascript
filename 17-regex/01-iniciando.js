@@ -66,9 +66,17 @@ console.log(str.match(/o{2}/g))
 // TODO: {n,m} => Pesquisa a menor (n) e a maior (m) ocorrências do caractere precedido. 
 console.log(str.match(/o{2,4}/g))
 
-// TODO: [xyz]
+// TODO: [xyz] => Pesquisa correpondência de um conjunto de caracteres
+console.log('correspondência de [xyz]',str.match(/[cob]/g))
+// Pode-se utilizar o hífen para definir um intervalo de caracteres
+console.log(str.match(/[c-o]/g))
+// Pode-se utilizar case sensitive
+console.log(str.match(/[Sc-o]/g))
+// Ou ignorar o case sensitive utilizando i no final da expressão
+console.log(str.match(/[Sc-o]/gi))
 
-// TODO: [^xyz]
+// TODO: [^xyz] => Negação de [xyz], ou seja, busca pelos cacteres diferentes do informados
+console.log('Não correspondência de [xyz]',str.match(/[^c-o]/g))
 
 // TODO: [\b]
 
