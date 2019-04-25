@@ -80,19 +80,22 @@ console.log('Não correspondência de [xyz]',str.match(/[^c-o]/g))
 
 // TODO: [\b]
 
-// TODO: \b => Busca por correspondência  de uma fronteira de caractere. Uma fronteira corresponde a posição onde o caractere/palavra não é seguido ne nenhum caractere ou palavra.
+// \b => Busca por correspondência  de uma fronteira de caractere. Uma fronteira corresponde a posição onde o caractere/palavra não é seguido ne nenhum caractere ou palavra.
 str = "Testing match"
 console.log('\\b',str.match(/s\b/gi))
 // output: null => Retorna esse resultado pois s (termo buscado) é seguido por outro caractere
 
-// TODO: \B => Negação da fronteire de caractere. No lugar buscar correspondência somente onde o caractere/palavra não é seguido por um caractere, irá buscar onde for seguido
+// \B => Negação da fronteire de caractere. No lugar buscar correspondência somente onde o caractere/palavra não é seguido por um caractere, irá buscar onde for seguido
 console.log('\\B',str.match(/s\B/gi))
 
 // TODO: \cx
 
-// TODO: \d
+// \d => Encontra correspondência de um número [0-9]
+str = 'My phone number is: +55 9 0000-0000'
+console.log('\\d', str.match(/\d/g))
 
-// TODO: \D
+// \D => Negação de \d
+console.log('\\D', str.match(/\D/g))
 
 // TODO: \f
 
