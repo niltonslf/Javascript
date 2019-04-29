@@ -105,9 +105,12 @@ console.log('\\n', longStr.match(/e\n/g))
 
 // TODO: \r
 
-// TODO: \s
+// \s => Encontra correspondêcia com um único caractere de espaço em branco, tabulação, quebra de linha...
+console.log('\\s', longStr.match(/\s/g))
 
-// TODO: \S
+// TODO: \S => Negação de \s
+
+console.log('\\S', longStr.match(/\S/g))
 
 // TODO: \t
 
