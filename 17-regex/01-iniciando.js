@@ -127,8 +127,12 @@ console.log('\\W', str.match(/\W/g))
 
 // TODO: \num
 
-// TODO: \0
+// TODO: \0 => econtra correspondência de um caractere null
+str = 'bla bla bla \0 bla bla'
+console.log('\\0', str.match(/\0/g))
 
-// TODO: \xhh
+// \xhh => Encontra correspondência com códigos hexadecimais de dois digitos
+str = 'World Wide Web'
+console.log('\\xhh', str.match(/\x57/g))
 
 // TODO: \uhhhh
