@@ -112,15 +112,18 @@ console.log('\\s', longStr.match(/\s/g))
 
 console.log('\\S', longStr.match(/\S/g))
 
-// TODO: \t
+// \t => Encontra correspondência de uma tabulação
+str = 'My text with		tabulation & 2.'
+console.log(str)
+console.log('\\t', str.match(/\t/g))
 
 // TODO: \v
 
-// TODO: \w
+// \w => Encontra correspondencia de qualquer caractere alfanumérico incluindo underline. Equivalente a [A-Za-z0-9_]
+console.log('\\w', str.match(/\w/g))
 
-// TODO: \W
-
-// TODO: \W
+// \W => Negação de \w
+console.log('\\W', str.match(/\W/g))
 
 // TODO: \num
 
